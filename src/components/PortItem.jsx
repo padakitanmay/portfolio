@@ -1,8 +1,8 @@
 import React from "react";
 
-function PortItem({ repo }) {
+const PortItem = ({ repo }) => {
     const imageUrl =
-        "https://foundations.projectpythia.org/_images/GitHub-logo.png";    
+        "https://foundations.projectpythia.org/_images/GitHub-logo.png";
     const title = repo.name;
 
     return (
@@ -17,11 +17,10 @@ function PortItem({ repo }) {
                     <h3 className='text-lg font-semibold text-gray-800 mb-2'>
                         {title}
                     </h3>
-                    {/* <p className='text-gray-700'>{description}</p> */}
                 </div>
             </div>
         </a>
     );
-}
+};
 
 export default PortItem;

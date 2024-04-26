@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-function useFetch() {
+export const useFetch = () => {
     const [repos, setRepos] = useState([]);
     const url = "https://api.github.com/users/padakitanmay/repos";
     useEffect(() => {
@@ -11,6 +11,4 @@ function useFetch() {
             });
     }, []);
     return repos;
-}
-
-export default useFetch;
+};

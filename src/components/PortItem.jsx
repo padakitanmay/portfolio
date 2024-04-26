@@ -2,8 +2,7 @@ import React from "react";
 
 function PortItem({ repo }) {
     const imageUrl =
-        "https://foundations.projectpythia.org/_images/GitHub-logo.png";
-    console.log(repo);
+        "https://foundations.projectpythia.org/_images/GitHub-logo.png";    
     const title = repo.name;
 
     return (
@@ -13,9 +12,7 @@ function PortItem({ repo }) {
                     src={imageUrl}
                     alt={title}
                     className='w-full h-48 object-cover'
-                    onClick={imageUrl}
                 />
-                <link rel='' href='' />
                 <div className='p-4'>
                     <h3 className='text-lg font-semibold text-gray-800 mb-2'>
                         {title}

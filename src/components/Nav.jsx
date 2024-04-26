@@ -1,11 +1,14 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Nav() {
     return (
         <nav className='flex items-center justify-between flex-wrap bg-teal-500 p-6'>
             <div className='flex items-center flex-shrink-0 text-white mr-6'>
                 <span className='font-semibold text-xl tracking-tight'>
-                    Logo
+                    <Link to={"/"}>
+                        Logo
+                    </Link>
                 </span>
             </div>
             <div className='block lg:hidden'>
@@ -26,13 +29,13 @@ function Nav() {
                         href='#responsive-header'
                         className='block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4'
                     >
-                        Docs
+                        <Link to={"/about"}>About</Link>
                     </a>
                     <a
                         href='#responsive-header'
                         className='block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4'
                     >
-                        Examples
+                        <Link to={"/repos"}>Repositories</Link>
                     </a>
                     <a
                         href='#responsive-header'

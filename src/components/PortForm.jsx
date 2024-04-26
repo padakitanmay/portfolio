@@ -2,8 +2,7 @@ import React from "react";
 import PortItem from "./PortItem";
 import useFetch from "../hooks/useFetch";
 
-const PostForm = () => {
-    
+const PortForm = () => {
     const data = useFetch();
     return (
         <div className='container mx-auto py-8 px-4'>
@@ -12,11 +11,11 @@ const PostForm = () => {
             </h2>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-center'>
                 {data.map((item) => (
-                    <PortItem repo={item}/>
+                    <PortItem key={item.id} repo={item}/>
                 ))}
             </div>
         </div>
     );
 };
 
-export default PostForm;
+export default PortForm;

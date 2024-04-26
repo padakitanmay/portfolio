@@ -1,20 +1,29 @@
 import React from "react";
 
-function PortItem({ title, description, imageUrl }) {
+function PortItem({ repo }) {
+    const imageUrl =
+        "https://foundations.projectpythia.org/_images/GitHub-logo.png";
+    console.log(repo);
+    const title = repo.name;
+
     return (
-        <div className='bg-white rounded-lg shadow-md overflow-hidden transform transition duration-300 hover:scale-105'>
-            <img
-                src={imageUrl}
-                alt={title}
-                className='w-full h-48 object-cover'
-            />
-            <div className='p-4'>
-                <h3 className='text-lg font-semibold text-gray-800 mb-2'>
-                    {title}
-                </h3>
-                <p className='text-gray-700'>{description}</p>
+        <a href={repo.html_url}>
+            <div className='bg-white rounded-lg shadow-md overflow-hidden transform transition duration-300 hover:scale-105'>
+                <img
+                    src={imageUrl}
+                    alt={title}
+                    className='w-full h-48 object-cover'
+                    onClick={imageUrl}
+                />
+                <link rel='' href='' />
+                <div className='p-4'>
+                    <h3 className='text-lg font-semibold text-gray-800 mb-2'>
+                        {title}
+                    </h3>
+                    {/* <p className='text-gray-700'>{description}</p> */}
+                </div>
             </div>
-        </div>
+        </a>
     );
 }
 

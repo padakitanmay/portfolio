@@ -4,11 +4,12 @@ import { Link } from "react-router-dom";
 const App = () => {
     return (
         <>
-            <div className='my-10'>
+            <div className="text-center font-mono italic text-5xl my-7">
+                Hello! This is Tanmay Padaki
                 <Link to={"/repos"}>
-                    <button className='flex items-center justify-center bg-black text-white mx-10 rounded-xl'>
-                        REPOS
-                    </button>
+                <div className="">
+                    Click here to get started
+                </div>
                 </Link>
             </div>
         </>

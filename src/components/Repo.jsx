@@ -1,6 +1,6 @@
 import React from "react";
 
-const PortItem = ({ repo }) => {
+const Repo = ({ repo }) => {
     const imageUrl =
         "https://foundations.projectpythia.org/_images/GitHub-logo.png";
     const title = repo.name;
@@ -23,4 +23,4 @@ const PortItem = ({ repo }) => {
     );
 };
 
-export default PortItem;
+export default Repo;

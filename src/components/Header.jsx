@@ -3,10 +3,14 @@ import { Link } from "react-router-dom";
 
 const Header = () => {
     return (
-        <Header className='flex items-center justify-between flex-wrap bg-teal-500 p-6'>
+        <nav className='flex items-center justify-between flex-wrap bg-teal-500 p-6'>
             <div className='flex items-center flex-shrink-0 text-white mr-6'>
                 <span className='font-semibold text-xl tracking-tight'>
-                    <Link to={"/"}>Logo</Link>
+                    <Link to={"/"}>
+                        <div>
+                            <img src='/icon.png' alt='logo' />
+                        </div>
+                    </Link>
                 </span>
             </div>
             <div className='block lg:hidden'>
@@ -21,7 +25,7 @@ const Header = () => {
                     </svg>
                 </button>
             </div>
-            <div className='w-full block flex-grow lg:flex lg:items-center lg:w-auto'>
+            <div className='w-full block flex-auto lg:flex lg:items-center lg:w-auto'>
                 <div className='text-sm lg:flex-grow'>
                     <a
                         href='#responsive-header'
@@ -35,20 +39,15 @@ const Header = () => {
                     >
                         <Link to={"/repos"}>Repositories</Link>
                     </a>
-                    <a
+                    {/* <a
                         href='#responsive-header'
-                        className='block mt-4 lg:inline-blocklg:mt-0 text-teal-200 hover:text-white'
+                        className='block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white '
                     >
                         Blog
-                    </a>
-                </div>
-                <div>
-                    <button className='bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 rounded'>
-                        Log in
-                    </button>
+                    </a> */}
                 </div>
             </div>
-        </Header>
+        </nav>
     );
 };
 
